@@ -13,7 +13,7 @@ export const LocalizationEditor = ({ control, menu, id, compact, textarea, class
     const localizationEditorCompactClasses = classnames(
         'fd-input-group',
         {
-            'fd-input-group--compact': compact && !!textarea === false
+            'fd-input-group--compact': compact && !textarea
         },
         'fd-input-group--after'
     );
