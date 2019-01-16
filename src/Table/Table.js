@@ -1,10 +1,17 @@
+import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 export const Table = props => {
     const { headers, tableData, className, ...rest } = props;
+
+    const tableClasses = classnames(
+        'fd-table',
+        className
+    );
+
     return (
-        <table className={`fd-table${className ? ' ' + className : ''}`} {...rest}>
+        <table className={tableClasses} {...rest}>
             <thead>
                 <tr>
                     {headers.map((header, index) => {
