@@ -5,10 +5,10 @@ import React from 'react';
 
 // ------------------------------------------- Menu ------------------------------------------
 export const LocalizationEditor = ({ control, menu, id, compact, textarea, className, ...props }) => {
-    const localizationEditorClasses = classnames(
-        'fd-localization-editor',
-        className
-    );
+    // const localizationEditorClasses = classnames(
+    //     'fd-localization-editor',
+    //     className
+    // );
 
     return (
         <div className={`fd-localization-editor${className ? ' ' + className : ''}`} {...props}>

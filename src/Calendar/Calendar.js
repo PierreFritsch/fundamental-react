@@ -472,19 +472,18 @@ export class Calendar extends Component {
                 let copyDate = day;
 
                 let dayClasses = classnames(
-                {
-                    'fd-calendar__item': !this.displayIsDayOtherMonth(day),
-                    'fd-calendar__item--other-month': this.displayIsDayOtherMonth(day),
-                    'fd-calendar__item--current': this.state.todayDate.getTime() === copyDate.getTime(),
-                    'is-selected': this.displayIsSelected(day),
-                    'is-selected-range-first': this.displaySelectedRangeFirst(day),
-                    'is-selected-range-last': this.displaySelectedRangeLast(day),
-                    'is-selected-range': this.displayBetweenRange(day),
-                    'is-disabled': this.displayDisabled(day),
-                    'is-blocked': this.isDateBetween(day, blockedDates)
-
-                }
-            );
+                    {
+                        'fd-calendar__item': !this.displayIsDayOtherMonth(day),
+                        'fd-calendar__item--other-month': this.displayIsDayOtherMonth(day),
+                        'fd-calendar__item--current': this.state.todayDate.getTime() === copyDate.getTime(),
+                        'is-selected': this.displayIsSelected(day),
+                        'is-selected-range-first': this.displaySelectedRangeFirst(day),
+                        'is-selected-range-last': this.displaySelectedRangeLast(day),
+                        'is-selected-range': this.displayBetweenRange(day),
+                        'is-disabled': this.displayDisabled(day),
+                        'is-blocked': this.isDateBetween(day, blockedDates)
+                    }
+                );
 
                 days.push(<td className={dayClasses} key={copyDate}
                     onClick={() => this.dateClick(copyDate, enableRangeSelection)} role='gridcell'><span className='fd-calendar__text'>{dateFormatted}</span>
