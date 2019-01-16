@@ -1,21 +1,40 @@
+import classnames from 'classnames';
 import { Popover } from '../Popover/Popover';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 // ------------------------------------------- Combobox Input ------------------------------------------
 export const ComboboxInput = ({ placeholder, menu, compact, className, ...props }) => {
+    const comboboxInputClasses = classnames(
+        'fd-combobox-input',
+        className
+    );
+
+    const comboboxPopoverClasses = classnames(
+        'fd-input-group',
+        'fd-input-group--after',
+        {
+            'fd-input-group--compact': compact
+        }
+    );
+
+    const comboboxPopoverInputClasses = classnames(
+        'fd-input',
+        {
+            'fd-input--compact': compact
+        }
+    );
+
     return (
-        <div className={`fd-combobox-input${className ? ' ' + className : ''}`} {...props}>
+        <div className={comboboxInputClasses} {...props}>
             <Popover
                 body={menu}
                 control={
                     <div className='fd-combobox-control'>
                         <div
-                            className={`fd-input-group fd-input-group--after${
-                                compact ? ' fd-input-group--compact' : ''
-                            }`}>
+                            className={comboboxPopoverClasses}>
                             <input
-                                className={`fd-input${compact ? ' fd-input--compact' : ''}`}
+                                className={comboboxPopoverInputClasses}
                                 id=''
                                 placeholder={placeholder}
                                 type='text' />
