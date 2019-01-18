@@ -26,7 +26,7 @@ export const ComboboxInput = ({ placeholder, menu, compact, className, ...props 
     );
 
     return (
-        <div className={comboboxInputClasses} {...props}>
+        <div {...props} className={comboboxInputClasses}>
             <Popover
                 body={menu}
                 control={

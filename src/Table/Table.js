@@ -11,7 +11,7 @@ export const Table = props => {
     );
 
     return (
-        <table className={tableClasses} {...rest}>
+        <table {...rest} className={tableClasses}>
             <thead>
                 <tr>
                     {headers.map((header, index) => {

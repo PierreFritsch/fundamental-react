@@ -136,8 +136,8 @@ export class MultiInput extends Component {
 
         return (
             <div
-                className={multiInputClasses}
-                {...rest}>
+                {...rest}
+                className={multiInputClasses}>
                 <div className='fd-multi-input-field'>
                     <div className='fd-popover'>
                         <div className='fd-popover__control'>

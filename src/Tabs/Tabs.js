@@ -13,8 +13,8 @@ export const Tabs = props => {
 
     return (
         <ul
-            className={tabClasses}
-            {...rest}>
+            {...rest}
+            className={tabClasses}>
             {children}
         </ul>
     );
@@ -63,7 +63,7 @@ export class TabComponent extends Component {
 
         return (
             <BrowserRouter>
-                <ul className={tabClasses} {...rest}>
+                <ul {...rest} className={tabClasses}>
                     {ids.map(id => {
                         return (
                             <li className='fd-tabs__item' key={id.id}>
